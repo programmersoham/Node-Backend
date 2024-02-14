@@ -1,6 +1,9 @@
 const express = require('express');
 const connectDB = require('./db');
-const routes = require("./API/Books");
+
+const { initDb } = require("./db");
+
+
 const swaggerUi = require('./swagger'); // Import the Swagger router
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -14,9 +17,10 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use("/", require("./API/Routes"));
 // use the routes module as a middleware
 // for the /api/books path
-app.use("/api/books", routes);
+
 // Connect Database
 connectDB();
 
