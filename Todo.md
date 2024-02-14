@@ -1,0 +1,4 @@
+- [ ] add proper schema for api request in swagger.
+- [ ] create api for auth.
+- [ ] User can only see their own book list. 
+- [ ] Add better styling.
