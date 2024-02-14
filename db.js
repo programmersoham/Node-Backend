@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db =
-    "mongodb+srv://soham:FlRhj0AZsHPpPvgw@cluster0.zntuept.mongodb.net/?retryWrites=true&w=majority";
+    "";
 /* Connection string from mongo cloud db */
 
 mongoose.set("strictQuery", true, "useNewUrlParser", true);
